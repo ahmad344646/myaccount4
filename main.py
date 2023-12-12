@@ -217,7 +217,7 @@ def running():
         print("Cookies copied successfully..")
         driver1.quit()
 
-        time.sleep(25)
+        time.sleep(7)
 
 def sdsf():
     while True:
@@ -229,7 +229,7 @@ def sdsf():
 
 def updatee():
     owner = "ahmad344646"
-    repo_name = f"myaccount{str(account_number)}"
+    repo_name = "mycookies"
     file_path = f'account_{str(account_number)}.json'
     commit_message = 'Update file content'
     github_token = os.getenv("GITHUB_TOKEN")
