@@ -207,6 +207,14 @@ def running():
                         EC.element_to_be_clickable((By.XPATH, '//*[@id="maincolumn"]/div/div[1]/div[2]/a[4]'))).click()
             page_source = driver1.page_source
             soup = BeautifulSoup(page_source, 'html.parser')
+            
+            b_tags = soup.find_all('b')
+
+# Print the text content of each <b> tag
+            for b_tag in b_tags:
+                print(b_tag.text)
+
+                
             last_b_tag = soup.find_all('b')[-1] if soup.find_all('b') else None
             print(f"today total views: {last_b_tag.text}")
             if int(last_b_tag.text) > 100:
